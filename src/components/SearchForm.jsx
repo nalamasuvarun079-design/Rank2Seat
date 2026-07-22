@@ -62,11 +62,11 @@ function SearchForm() {
       </select>
 
       <button
-        onClick={handleSearch}
-        className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-3 font-bold"
-      >
-        Find My Colleges
-      </button>
+  onClick={handleSearch}
+  className="w-full border border-gray-300 rounded-xl p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+>
+  🔍 Find My Colleges
+</button>
 
     </div>
   );

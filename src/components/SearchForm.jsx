@@ -59,14 +59,37 @@ function SearchForm() {
         <option>AI & ML</option>
         <option>Data Science</option>
         <option>Cyber Security</option>
+        <option>Information Technology</option>
+
+        <option>ECE</option>
+        <option>Embedded Systems</option>
+        <option>VLSI Design</option>
+        <option>Digital Electronics</option>
+
+        <option>EEE</option>
+        <option>Power Electronics</option>
+        <option>Power Systems</option>
+
+        <option>Mechanical Engineering</option>
+        <option>CAD/CAM</option>
+        <option>Thermal Engineering</option>
+        <option>Machine Design</option>
+
+        <option>Civil Engineering</option>
+        <option>Structural Engineering</option>
+        <option>Transportation Engineering</option>
+        <option>Geotechnical Engineering</option>
+
+        <option>MCA</option>
+        <option>MBA</option>
       </select>
 
-     <button
-  onClick={handleSearch}
-  className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-3 font-bold"
->
-  🔍 Find My Colleges
-</button>
+      <button
+        onClick={handleSearch}
+        className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl p-3 font-bold"
+      >
+        🔍 Find My Colleges
+      </button>
 
     </div>
   );

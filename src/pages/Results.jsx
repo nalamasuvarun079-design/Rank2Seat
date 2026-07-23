@@ -7,6 +7,12 @@ function Results() {
 
   const { rank, category, branch } = location.state || {};
 
+  const userRank = Number(rank);
+
+  const filteredColleges = colleges.filter(
+    (college) => college.branch === branch
+  );
+
   return (
     <div className="min-h-screen bg-slate-100 p-8">
       <div className="max-w-5xl mx-auto">
@@ -25,14 +31,28 @@ function Results() {
           <p><strong>Branch:</strong> {branch}</p>
         </div>
 
-        <div className="space-y-5">
-          {colleges.map((college) => (
-            <CollegeCard
-              key={college.id}
-              college={college}
-            />
-          ))}
-        </div>
+        {filteredColleges.length === 0 ? (
+          <div className="bg-red-100 text-red-700 p-5 rounded-xl">
+            No colleges found.
+          </div>
+        ) : (
+          <div className="space-y-5">
+            {filteredColleges.map((college) => (
+              <CollegeCard
+                key={college.id}
+                college={{
+                  ...college,
+                  chance:
+                    userRank <= college.cutoff
+                      ? "GREEN"
+                      : userRank <= college.cutoff + 1000
+                      ? "YELLOW"
+                      : "RED",
+                }}
+              />
+            ))}
+          </div>
+        )}
 
       </div>
     </div>
